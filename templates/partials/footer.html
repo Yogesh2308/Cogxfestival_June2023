@@ -1,0 +1,75 @@
+<!--
+templateType: global_partial
+label: Footer
+-->
+
+<footer class="custom-main-footer">
+  <div class="custom-footer">
+    <div class="container">
+      <div class="custom-footer-content">
+        <div class="footer-main-section">
+          <div class="footer-main-content">
+            <div class='footer-logo-section'>
+              <div class='footer-logo-w'>
+                <div class='footer-logo'>
+                  {% module "footer_logo" label="Logo" path="@hubspot/logo", alt="Logo", link="/global/en.html", img={src="{{ get_asset_url('/Cogxfestival_June2023/images/Kendal-Crosslands-logo_White.png') }}", width=500, override_inherited_src=true} %}
+                </div>
+              </div>
+            </div>
+            <div class='footer-address-section'>
+              <div class='footer-address'>
+                <div class='footer-address-title'>
+                  {% module "address_text" label="Address Text" path="@hubspot/rich_text" html="<h5>Kendal-Crosslands Communities</h5>"%}
+                </div>
+                <div class="footer-location">
+                  {% module "location1" label="location" id="177239390239" path="@hubspot/menu"%}
+                </div>
+              </div>
+            </div>
+            <div class='footer-menu-section'>
+              <div class='footer-menu'>
+                {% module "menus" label="menus" id="140189140352" path="@hubspot/menu"%}
+              </div>
+              <div class='mobile-menu-wrapper'>
+                <div class="awb-menu__m-toggle awb-menu__m-toggle_no-text">
+                  <span class="awb-menu__m-toggle-inner">
+                    <span class="awb-menu__m-collapse-icon awb-menu__m-collapse-icon_no-text">
+                      <span class="awb-menu__m-collapse-icon-open awb-menu__m-collapse-icon-open"></span>
+                      <span class="awb-menu__m-collapse-icon-close awb-menu__m-collapse-icon-close"></span>
+                    </span>
+                  </span>
+                </div>
+                <div class='mobile-menu'>
+                  {% module "mobile_menus" label="Mobile Menus" id="140285946410" path="@hubspot/menu"%}
+                </div>
+              </div>
+              </div>
+              <div class='footer-social-icon'>
+                <div class='footer-socials'>
+                  {% module "menus2" label="menus2" id="140188819603" path="@hubspot/menu"%}
+                </div>
+              </div>
+              <div class='footer-images-section'>
+                {% module "module_16972785934636" path="/Cogxfestival_June2023/modules/footer-logo", label="footer-logo" %}
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom-section">
+            <div class="footer-bottom">
+              <div class='copyright'>
+                {% module_block module "footer_copyright" path="@hubspot/rich_text" %}
+                {% module_attribute 'html'%}
+                <p>
+                  ©COPYRIGHT 2012 - {{year}} |   Kendal Crosslands Communities     |   ALL RIGHTS RESERVED   |  CREATED BY 
+                  <a href="https://internetrnd.com" target="_blank">Internet RnD</a> & 
+                  <a href="https://minglmarketing.com/" target="_blank">Mingl Marketing</a>
+                </p>
+                {% end_module_attribute%}
+                {% end_module_block%}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </footer>

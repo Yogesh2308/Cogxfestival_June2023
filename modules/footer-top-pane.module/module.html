@@ -1,0 +1,22 @@
+<div class="custom-button">
+  {% for item in module.button %}
+  <div class="button">
+    {% if module.item.button_choice == "stn" %}
+    {% set href = item.button_link.url.href %}
+    {% if item.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+    {% set href = "mailto:" + href %}
+    {% endif %}
+    <a href="{{ href }}"
+       {% if item.button_link.open_in_new_tab %}target="_blank"{% endif %}
+       {% if item.button_link.rel %}rel="{{ item.button_link.rel }}"{% endif %}
+       >
+      {{ item.button_text }}
+    </a>
+    {% endif %}
+    {% if module.item.button_choice == "cta" %}
+    {% cta guid="{{ item.call_to_action }}" %}
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+

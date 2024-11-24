@@ -1,0 +1,17 @@
+<div class="custom-listing-tag-wrapper">
+	<div class="categories-overview-container">
+		<div class="category-container">
+			{% set topics = blog_tags(module.select_blog,module.number_of_tags) %}
+			<div class="blog-tag-list">
+				<span class="blog-tag">	All </span>
+			</div>
+			<div class="blog-tag-main">
+				{% for tag in topics  %}
+				<span>{{ tag }}</span>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+
+

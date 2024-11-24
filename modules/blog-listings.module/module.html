@@ -1,0 +1,153 @@
+<div class="custom-listing-wrapper">
+  {% for content in contents %}
+  {# Set featured image #}
+  {# This checks to see if a user is opted into the blog listing editing experience. If they are it uses the conditional from the module. If they are not it uses the conditional from blog settings #}
+  {% set show_featured_image = false %}
+  {% if content.featured_image %}
+  {% if blog.listing_page_id %}
+  {% if module.featured_image %}
+  {% set show_featured_image = true %}
+  {% endif %}
+  {% else %}
+  {% if group.use_featured_image_in_summary %}
+  {% set show_featured_image = true %}
+  {% endif %}
+  {% endif %}
+  {% endif %}
+  {# End set featured image #}
+  <div class="custom-listing-content-wrapper highlighted">
+    <div class="card_image">
+      <img src="https://39996309.fs1.hubspotusercontent-na1.net/hubfs/39996309/do.jpg" aria-label="Read full post: Sample Post 1">
+    </div>
+    <div class="card_body">
+      <article class="card-content">
+
+
+
+        <div class="listing-info-wrp">
+          <div class="blog-categories">
+            <div class="blog-category-label-container">
+
+
+
+            </div>
+          </div>
+          <div class="blog-author-and-date">
+            <div class=" blog-author">
+              <span class="date-list">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
+                  <path d="M16 8a5 5 0 1 0 5 5a5 5 0 0 0-5-5z" fill="currentColor"></path>
+                  <path d="M16 2a14 14 0 1 0 14 14A14.016 14.016 0 0 0 16 2zm7.992 22.926A5.002 5.002 0 0 0 19 20h-6a5.002 5.002 0 0 0-4.992 4.926a12 12 0 1 1 15.985 0z" fill="currentColor">
+                  </path>
+                </svg></span>
+              <p>recyclehero</p>
+            </div>
+            <div class=" blog-calendar">
+              <span class="lis-calendar">
+                <svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+                  <rect fill="none" stroke="currentColor" stroke-width="32" x="32" y="64" width="416" height="384" rx="0" stroke-linecap="square"></rect>
+                  <path fill="currentColor" d="M256 192h48v48h-48zM336 192h48v48h-48zM256 272h48v48h-48zM336 272h48v48h-48zM96 272h48v48H96zM176 272h48v48h-48zM96 352h48v48H96zM176 352h48v48h-48zM256 352h48v48h-48z"></path>
+                  <path fill="none" stroke="currentColor" stroke-width="32" stroke-linecap="square" d="M112 32v32M368 32v32"></path>
+                  <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" d="M448 144H32"></path>
+                </svg></span>
+              <p>	03 07 2023</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-content-text">
+
+
+          <p>
+
+
+
+          </p>
+        </div>
+      </article>
+      <div class="read_more">
+        <div class="blog-post__read-more">
+          <a class="article--excerpt-readmore" href="//39996309.hs-sites.com/sample-blog-by-hubspot-migration-team/sample-post-1">
+
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="custom-listing-content-wrapper">
+    <div class="card_image" >
+      <img src="{{content.featured_image}}" aria-label="{% if content.featured_image_alt_text %}Featured image: {{ content.featured_image_alt_text }} - {% endif %}Read full post: {{ content.name|striptags }}">
+    </div>
+    <div class="card_body">
+      <article class="card-content">
+        {# Title #}
+        {% if module.post_title %}
+        <h1>{{ content.name }}</h1>
+        {% endif %}
+        {# End title #}
+        <div class="listing-info-wrp">
+          <div class="blog-categories">
+            <div class="blog-category-label-container">
+              {# Tags #}
+              {% if module.tags %}
+              {% if content.tag_list %}
+              <div class="blog-post__tags">
+                {% for tag in content.tag_list %}
+                <p class="blog-post__tag">{{ tag.name }}</p>{% if not loop.last %}{% endif %}
+                {% endfor %}
+              </div>
+              {% endif %}
+              {% endif %}
+              {# End tags #}
+            </div>
+          </div>
+          <div class="blog-author-and-date">
+            <div class=" blog-author">
+              <span class="date-list">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
+                  <path d="M16 8a5 5 0 1 0 5 5a5 5 0 0 0-5-5z" fill="currentColor"></path>
+                  <path d="M16 2a14 14 0 1 0 14 14A14.016 14.016 0 0 0 16 2zm7.992 22.926A5.002 5.002 0 0 0 19 20h-6a5.002 5.002 0 0 0-4.992 4.926a12 12 0 1 1 15.985 0z" fill="currentColor">
+                  </path>
+                </svg></span>
+              <p>recyclehero</p>
+            </div>
+            <div class=" blog-calendar">
+              <span class="lis-calendar">
+                <svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+                  <rect fill="none" stroke="currentColor" stroke-width="32" x="32" y="64" width="416" height="384" rx="0" stroke-linecap="square"></rect>
+                  <path fill="currentColor" d="M256 192h48v48h-48zM336 192h48v48h-48zM256 272h48v48h-48zM336 272h48v48h-48zM96 272h48v48H96zM176 272h48v48h-48zM96 352h48v48H96zM176 352h48v48h-48zM256 352h48v48h-48z"></path>
+                  <path fill="none" stroke="currentColor" stroke-width="32" stroke-linecap="square" d="M112 32v32M368 32v32"></path>
+                  <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" d="M448 144H32"></path>
+                </svg></span>
+              <p>	{{ content.publish_date_local_time.strftime('%d %m %Y') }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-content-text">
+          {# Summary #}
+          {# This checks to see if a user is opted into the blog listing editing experience. If they are it uses the conditional from the module. If they are not it uses the conditional from blog settings #}
+          <p>
+            {% if blog.listing_page_id %}
+            {% if module.description %}
+            {{ content.post_list_content|truncatehtml(100)|striptags|safe }}
+            {% endif %}
+            {% else %}
+            {% if content_group.show_summary_in_listing %}
+            {{ content.post_list_content|truncatehtml(100)|striptags|safe }}
+            {% endif %}
+            {% endif %}
+          </p>
+          {# End summary #}</div>
+      </article>
+      <div class="read_more">
+        <div class="blog-post__read-more">
+          <a class="article--excerpt-readmore" href="{{ content.absolute_url }}">
+            {{ module.read_more_text }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endfor %}
+</div>
+

@@ -1,0 +1,60 @@
+[ {
+  "id" : "7308872d-8cd7-3b65-4cdf-ad6e9feb9571",
+  "name" : "images",
+  "display_width" : null,
+  "label" : "Images",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : 6,
+    "sorting_label_field" : "f57494c1-9e28-209b-4cb4-b5ccfcb23582",
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "f57494c1-9e28-209b-4cb4-b5ccfcb23582",
+    "name" : "image_field",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://39996309.fs1.hubspotusercontent-na1.net/hubfs/39996309/carf-logo.jpg",
+      "alt" : "carf-logo",
+      "loading" : "lazy",
+      "width" : 80,
+      "height" : 80,
+      "max_width" : 80,
+      "max_height" : 80
+    }
+  }, {
+    "id" : "2427004d-ff0b-0b57-6166-c3496d5fb8cf",
+    "name" : "link_field",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "https://www.carf.org/",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : true,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : [ ]
+} ]

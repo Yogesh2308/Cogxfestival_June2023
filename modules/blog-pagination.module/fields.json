@@ -1,0 +1,39 @@
+[ {
+  "id" : "a357f636-0f90-7400-ad12-769b351f598c",
+  "name" : "pagination_options",
+  "display_width" : null,
+  "label" : "Pagination Options",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "numbered", "Numbered" ], [ "linked", "Prev/Next" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "default" : "numbered"
+}, {
+  "id" : "55cd985f-1735-0b58-b756-2aa637c10d5a",
+  "name" : "previous_text",
+  "display_width" : null,
+  "label" : "Previous Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Prev"
+}, {
+  "id" : "b754fd70-a24f-9414-00c1-ddffc2e9c349",
+  "name" : "next_text",
+  "display_width" : null,
+  "label" : "Next Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Next"
+} ]

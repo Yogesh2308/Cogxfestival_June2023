@@ -1,0 +1,123 @@
+.child-theme section.custom-banner-wrapper {
+  padding-left: 6.25rem;
+  padding-right: 6.25rem;
+  grid-template-columns: repeat(12,minmax(0,82px));
+  -moz-column-gap: 24px;
+  column-gap: 24px;
+  padding-bottom: 7vmax;
+  padding-top: 7vmax;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+}
+.child-theme .custom-banner-inner {
+  grid-column: span 6/span 6;
+}
+.child-theme .custom-banner-text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 2rem;
+}
+.child-theme .custom-banner-title {
+  display: flex;
+  justify-content: flex-start;
+}
+.child-theme .custom-banner-title h1 {
+  font-size: 4rem;
+  margin-bottom: 2.25rem;
+  font-family: Maison;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.25;
+}
+.child-theme .custom-banner-inner-content {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 4rem;
+}
+.child-theme span.custom-banner-description {
+  color: #a6a6a6;
+  font-size: 1.375rem;
+  font-weight: 300;
+}
+
+.child-theme .banner-svg-wrapper {
+  grid-column: span 6/span 6;
+  margin-top: 7px;
+}
+.child-theme .banner-svg {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
+  outline: none;
+  cursor: auto;
+}
+.child-theme .banner-svg svg {
+  width: 100%;
+}
+
+@media (max-width:1247px){
+  .child-theme section.custom-banner-wrapper {
+    padding-left: 4.25rem;
+    padding-right: 4.25rem;
+  }
+}
+
+@media (max-width:1023px){
+  .child-theme section.custom-banner-wrapper {
+    padding-left: 3.25rem;
+    padding-right: 3.25rem;
+    -moz-column-gap: 20px;
+    grid-template-columns: repeat(12,minmax(0,48px));
+    column-gap: 20px;
+  }
+  .child-theme .custom-banner-inner {
+    grid-column: 1/-1;
+  }
+  .child-theme .custom-banner-title h1 {
+    font-size: 3rem;
+  }
+  .child-theme span.custom-banner-description {
+    font-size: 1.25rem;
+  }
+  .child-theme .banner-svg-wrapper {
+    grid-column: 1/-1;
+    margin-top: 1.25rem;
+  }
+}
+
+@media (max-width:767px){
+  .child-theme section.custom-banner-wrapper {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  .child-theme .custom-banner-title h1 {
+    margin-bottom: 1.75rem;
+  }
+  .child-theme span.custom-banner-description {
+    max-width: 56rem;
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width:479px){
+  .child-theme .header-top-col {
+    gap: 0.75rem;
+  }
+
+  .child-theme section.custom-banner-wrapper {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 7vmax;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+    padding-top: 7vmax;
+    grid-template-columns: repeat(12,minmax(0,24px));
+  }
+
+  .child-theme .custom-banner-title h1 {
+    font-size: 2.125rem;
+  }
+}

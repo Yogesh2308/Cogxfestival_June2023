@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="24" viewBox="0 0 34 24">
+  <style>.line{fill:none;stroke:#e0601f;stroke-width:4;}</style>
+  <line class="line" x1="34" transform="translate(0 2)"/>
+  <line class="line" x1="34" transform="translate(0 12)"/>
+  <line class="line" x1="34" transform="translate(0 22)"/>
+</svg>

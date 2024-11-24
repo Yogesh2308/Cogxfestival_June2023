@@ -1,0 +1,32 @@
+<!--
+    templateType: page
+    isAvailableForNewContent: true
+-->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    {% if content.html_title %}<title>{{ content.html_title }}</title>{% endif %}
+    <meta name="description" content="{{ content.meta_description }}">
+    {% if brand_settings.primaryFavicon.src %}
+    <link rel="shortcut icon" href="{{ brand_settings.primaryFavicon.src }}" />
+    {% endif %}
+    {{ standard_header_includes }}
+  </head>
+  <body>
+
+    {% if dynamic_page_hubdb_row %}        
+    <h2>{{ dynamic_page_hubdb_row.name }}</h2>
+    <h3>{{ dynamic_page_hubdb_row.description }}</h3>
+    {% elif dynamic_page_hubdb_table_id %}
+    {% for row in hubdb_table_rows(7429986) %}
+    <a href="{{ request.path }}/{{ row.hs_path }}">{{ row.hs_name }}</a>   
+    <h1>
+      {{row.tags}}
+    </h1>
+    {% endfor %}
+    {% endif %}
+
+    {{ standard_footer_includes }}
+  </body>
+</html>
